@@ -1,12 +1,14 @@
 import "./amount.css";
-export default function Amount({ amountText, person }) {
+export default function Amount({ amountText, person, amountInDollars }) {
   return (
     <div className="amount-container">
       <div className="text">
         <p className="tip-amount-text">{amountText}</p>
         <span className="person-text">{person}</span>
       </div>
-      <span className="amount-in-dollars">{`$${0.0}`}</span>
+      <span className="amount-in-dollars">{`$${amountInDollars.toFixed(
+        2
+      )}`}</span>
     </div>
   );
 }

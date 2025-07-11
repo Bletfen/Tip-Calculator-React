@@ -16,6 +16,8 @@
   font-size: 24px;
   font-weight: 700;
   align-items: center;
+  cursor: pointer;
+  border: 0.2rem solid transparent;
 }
 
 .input-value {
@@ -36,4 +38,20 @@
   color: #5e7a7d;
   font-size: 1.6rem;
   font-weight: 700;
+}
+
+.people-zero-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.not-zero {
+  color: #e17457;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.value-input:hover {
+  border: 0.2rem solid #26c2ae;
+  background: #f3f9fa;
 }
