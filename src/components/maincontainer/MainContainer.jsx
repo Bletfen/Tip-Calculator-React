@@ -20,6 +20,8 @@ export default function MainContainer() {
     setBill("");
     setPeople("");
     setTip(0);
+    setSelectedTip(null);
+    setCustomTip("");
   }
   function cantDivideOnZero() {}
   return (
