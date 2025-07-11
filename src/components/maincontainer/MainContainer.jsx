@@ -10,6 +10,7 @@ export default function MainContainer() {
   const [people, setPeople] = useState("");
   const [tip, setTip] = useState(0);
   const [selectedTip, setSelectedTip] = useState(null);
+  const [customTip, setCustomTip] = useState("");
   const numericBill = Number(bill);
   const numericPeople = Number(people);
   const tipAmount = (numericBill * tip) / 100;
@@ -41,12 +42,34 @@ export default function MainContainer() {
                 onClick={() => {
                   setTip(tip);
                   setSelectedTip(tip);
+                  setCustomTip("");
                 }}
               >
                 {tip}%
               </button>
             ))}
-            <button className="customButton tip-percent">Custom</button>
+            <input
+              type="number"
+              className="customButton tip-percent"
+              placeholder="Custom"
+              value={customTip}
+              onChange={(e) => {
+                const value = e.target.value;
+                setCustomTip(value);
+                setTip(Number(value));
+                setSelectedTip("custom");
+              }}
+              onKeyDown={(e) => {
+                const key = e.key;
+                const isNumber = /^[0-9]$/.test(key);
+                const isDecimal = key === ".";
+                const remove = key === "Backspace";
+                const arrows = key === "ArrowLeft" || key === "ArrowRight";
+                if (!isNumber && !isDecimal && !remove && !arrows) {
+                  e.preventDefault();
+                }
+              }}
+            />
           </div>
         </div>
         <InputContainer
@@ -71,7 +94,12 @@ export default function MainContainer() {
             amountInDollars={totalPerPerson}
           />
         </div>
-        <button className="reset-button" onClick={resetHandler}>
+        <button
+          className={`reset-button ${
+            bill || people || tip || selectedTip || customTip ? "active" : ""
+          }`}
+          onClick={resetHandler}
+        >
           RESET
         </button>
       </div>

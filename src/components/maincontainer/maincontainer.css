@@ -71,6 +71,8 @@
   font-family: "Space Mono";
   font-size: 2rem;
   font-weight: 700;
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .bill-input-person-wrapper {
@@ -88,6 +90,42 @@
 .tip-percent.active {
   background: #26c2ae;
   color: #00474b;
+}
+
+.customButton {
+  all: unset;
+  appearance: textfield;
+  -moz-appearance: textfield;
+  text-align: right;
+  color: #00474b;
+  font-family: "Space Mono";
+  font-size: 2.4rem;
+  font-weight: 700;
+  width: 93%;
+  padding: 0.6rem 1.3rem;
+  border-radius: 0.5rem;
+  border: 2px solid transparent;
+  background: #f3f9fa;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.customButton::-webkit-outer-spin-button,
+.customButton::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.customButton:hover {
+  border: 2px solid #26c2ae;
+}
+
+.reset-button.active {
+  background-color: #26c2ae;
+}
+
+.reset-button.active:hover {
+  background-color: #9fe8df;
 }
 
 @media only screen and (min-width: 90rem) {
@@ -116,5 +154,9 @@
 
   .tip-percent {
     padding: 0.6rem 1.4rem;
+  }
+
+  .customButton {
+    width: 9rem;
   }
 }
