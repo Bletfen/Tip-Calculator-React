@@ -42,7 +42,7 @@ npm start
 
 🔗 Live Demo
 
-    Add your deployed site link here (https://tip-calculator-react-taupe.vercel.app/)
+    https://tip-calculator-react-taupe.vercel.app/
 
 🧑‍💻 Author
 
