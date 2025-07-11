@@ -1,0 +1,13 @@
+.main-container {
+  width: 100%;
+  max-width: 92rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2.5rem 2.5rem 0rem 0rem;
+  background: #fff;
+  box-shadow: 0rem 3.2rem 4.3rem 0rem rgba(79, 166, 175, 0.2);
+  gap: 3.2rem;
+  padding: 3.2rem;
+}

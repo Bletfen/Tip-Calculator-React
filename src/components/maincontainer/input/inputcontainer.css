@@ -1,0 +1,40 @@
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.value-input {
+  display: flex;
+  border-radius: 5px;
+  background: #f3f9fa;
+  padding: 0.6rem 1.8rem;
+  color: #00474b;
+  text-align: right;
+  font-family: "Space Mono";
+  font-size: 24px;
+  font-weight: 700;
+  align-items: center;
+}
+
+.input-value {
+  all: unset;
+  background: #f3f9fa;
+}
+
+.input-value::-webkit-outer-spin-button,
+.input-value::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-value {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+
+.value-text {
+  color: #5e7a7d;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
