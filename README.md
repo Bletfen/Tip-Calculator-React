@@ -1,12 +1,54 @@
-# React + Vite
+# 💸 Tip Calculator – React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a **classic tip calculator app** built with **React**, allowing users to easily calculate the tip and total amount **per person** based on:
 
-Currently, two official plugins are available:
+- **Bill amount**
+- **Selected tip percentage**
+- **Number of people sharing the bill**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- 💵 Input for **bill amount**
+- 🎯 Choose **tip %** from buttons or enter **custom tip**
+- 👥 Enter **number of people**
+- 🧮 Displays **Tip Amount** and **Total per person**
+- ❗ Built-in **validation** (e.g. "Can't be zero")
+- ♻️ **Reset** button clears all inputs
+- 🖱️ Includes `hover` and `active` states
+- 📱 **Responsive** design – works across all screen sizes
+
+---
+
+## 🖥️ Technologies Used
+
+- ⚛️ **React (useState)**
+- 🎨 **CSS** for styling and transitions
+- ✅ Basic **input validation logic**
+- 📱 Mobile-first and **fully responsive layout**
+
+---
+
+## 📂 Getting Started
+
+Clone the repository and run locally:
+
+```bash
+git clone https://github.com/Bletfen/Tip-Calculator-React.git
+cd Tip-Calculator-React
+npm install
+npm start
+
+🔗 Live Demo
+
+    Add your deployed site link here (https://tip-calculator-react-taupe.vercel.app/)
+
+🧑‍💻 Author
+
+    GitHub: @Bletfen
+
+📄 License
+
+This project is open source and available under the MIT License.
+```
