@@ -2,6 +2,7 @@
   display: flex;
   flex-direction: column;
   gap: 0.6rem;
+  width: 100%;
 }
 
 .value-input {
@@ -20,17 +21,15 @@
 .input-value {
   all: unset;
   background: #f3f9fa;
+  appearance: textfield;
+  -moz-appearance: textfield;
+  width: 100%;
 }
 
 .input-value::-webkit-outer-spin-button,
 .input-value::-webkit-inner-spin-button {
   -webkit-appearance: none;
   margin: 0;
-}
-
-.input-value {
-  appearance: textfield;
-  -moz-appearance: textfield;
 }
 
 .value-text {

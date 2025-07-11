@@ -1,0 +1,36 @@
+.amount-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2.5rem;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  font-weight: 700;
+}
+
+.tip-amount-text {
+  font-size: 1.6rem;
+  color: #fff;
+}
+
+.person-text {
+  color: #7f9d9f;
+  font-size: 1.3rem;
+}
+
+.amount-in-dollars {
+  color: #26c2ae;
+  font-size: 3.2rem;
+  font-weight: 700;
+  letter-spacing: -0.667px;
+}
+
+@media only screen and (min-width: 90rem) {
+  .amount-in-dollars {
+    font-size: 4.8rem;
+    letter-spacing: -0.1rem;
+  }
+}
