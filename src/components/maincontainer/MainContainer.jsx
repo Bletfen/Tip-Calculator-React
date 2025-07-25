@@ -9,8 +9,6 @@ export default function MainContainer() {
   const [bill, setBill] = useState("");
   const [people, setPeople] = useState("");
   const [tip, setTip] = useState(0);
-  // const [selectedTip, setSelectedTip] = useState(null);
-  // const [customTip, setCustomTip] = useState("");
   const numericBill = Number(bill);
   const numericPeople = Number(people);
   const tipAmount = (numericBill * tip) / 100;
@@ -20,10 +18,7 @@ export default function MainContainer() {
     setBill("");
     setPeople("");
     setTip(0);
-    // setSelectedTip(null);
-    // setCustomTip("");
   }
-  // function cantDivideOnZero() {}
   return (
     <div className="main-container">
       <div className="bill-input-person-wrapper">
@@ -45,8 +40,6 @@ export default function MainContainer() {
                 }`}
                 onClick={() => {
                   setTip(currentTip);
-                  // setSelectedTip(tip);
-                  // setCustomTip("");
                 }}
               >
                 {currentTip}%
@@ -62,9 +55,7 @@ export default function MainContainer() {
               value={tip && !tipArray.includes(tip) ? tip : ""}
               onChange={(e) => {
                 const value = e.target.value;
-                // setCustomTip(value);
                 setTip(Number(value));
-                // setSelectedTip("custom");
               }}
               onKeyDown={(e) => {
                 const key = e.key;
