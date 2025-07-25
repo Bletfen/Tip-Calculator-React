@@ -3,14 +3,14 @@ import dollarSign from "/images/icon-dollar.svg";
 import personSign from "/images/icon-person.svg";
 import InputContainer from "./input/InputContainer";
 import Amount from "./amount/Amount";
-import { use, useState } from "react";
+import { useState } from "react";
 const tipArray = [5, 10, 15, 25, 50];
 export default function MainContainer() {
   const [bill, setBill] = useState("");
   const [people, setPeople] = useState("");
   const [tip, setTip] = useState(0);
-  const [selectedTip, setSelectedTip] = useState(null);
-  const [customTip, setCustomTip] = useState("");
+  // const [selectedTip, setSelectedTip] = useState(null);
+  // const [customTip, setCustomTip] = useState("");
   const numericBill = Number(bill);
   const numericPeople = Number(people);
   const tipAmount = (numericBill * tip) / 100;
@@ -20,8 +20,8 @@ export default function MainContainer() {
     setBill("");
     setPeople("");
     setTip(0);
-    setSelectedTip(null);
-    setCustomTip("");
+    // setSelectedTip(null);
+    // setCustomTip("");
   }
   function cantDivideOnZero() {}
   return (
