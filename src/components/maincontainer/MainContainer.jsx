@@ -9,6 +9,8 @@ export default function MainContainer() {
   const [bill, setBill] = useState("");
   const [people, setPeople] = useState("");
   const [tip, setTip] = useState(0);
+  // const [selectedTip, setSelectedTip] = useState(null);
+  // const [customTip, setCustomTip] = useState("");
   const numericBill = Number(bill);
   const numericPeople = Number(people);
   const tipAmount = (numericBill * tip) / 100;
@@ -18,8 +20,10 @@ export default function MainContainer() {
     setBill("");
     setPeople("");
     setTip(0);
+    // setSelectedTip(null);
+    // setCustomTip("");
   }
-  function cantDivideOnZero() {}
+  // function cantDivideOnZero() {}
   return (
     <div className="main-container">
       <div className="bill-input-person-wrapper">
@@ -33,29 +37,34 @@ export default function MainContainer() {
         <div className="tip-container">
           <span className="tip-text">Select Tip %</span>
           <div className="tip-wrapper">
-            {tipArray.map((tip) => (
+            {tipArray.map((currentTip) => (
               <button
-                key={tip}
+                key={currentTip}
                 className={`tip-percent ${
                   currentTip === tip && tipArray.includes(tip) ? "active" : ""
                 }`}
                 onClick={() => {
-                  setTip(tip);
-                  setSelectedTip(tip);
-                  setCustomTip("");
+                  setTip(currentTip);
+                  // setSelectedTip(tip);
+                  // setCustomTip("");
                 }}
               >
-                {tip}%
+                {currentTip}%
               </button>
             ))}
+
             <input
               type="number"
-              className="customButton tip-percent"
+              className={`customButton tip-percent ${
+                tip && !tipArray.includes(tip) ? "active" : ""
+              }`}
               placeholder="Custom"
               value={tip && !tipArray.includes(tip) ? tip : ""}
               onChange={(e) => {
                 const value = e.target.value;
+                // setCustomTip(value);
                 setTip(Number(value));
+                // setSelectedTip("custom");
               }}
               onKeyDown={(e) => {
                 const key = e.key;
