@@ -40,7 +40,9 @@ export default function MainContainer() {
             {tipArray.map((tip) => (
               <button
                 key={tip}
-                className={`tip-percent ${selectedTip === tip ? "active" : ""}`}
+                className={`tip-percent ${
+                  currentTip === tip && tipArray.includes(tip) ? "active" : ""
+                }`}
                 onClick={() => {
                   setTip(tip);
                   setSelectedTip(tip);
