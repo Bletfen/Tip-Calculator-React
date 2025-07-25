@@ -9,8 +9,6 @@ export default function MainContainer() {
   const [bill, setBill] = useState("");
   const [people, setPeople] = useState("");
   const [tip, setTip] = useState(0);
-  // const [selectedTip, setSelectedTip] = useState(null);
-  // const [customTip, setCustomTip] = useState("");
   const numericBill = Number(bill);
   const numericPeople = Number(people);
   const tipAmount = (numericBill * tip) / 100;
@@ -20,8 +18,6 @@ export default function MainContainer() {
     setBill("");
     setPeople("");
     setTip(0);
-    // setSelectedTip(null);
-    // setCustomTip("");
   }
   function cantDivideOnZero() {}
   return (
@@ -97,9 +93,7 @@ export default function MainContainer() {
           />
         </div>
         <button
-          className={`reset-button ${
-            bill || people || tip || selectedTip || customTip ? "active" : ""
-          }`}
+          className={`reset-button ${bill || people || tip ? "active" : ""}`}
           onClick={resetHandler}
         >
           RESET
