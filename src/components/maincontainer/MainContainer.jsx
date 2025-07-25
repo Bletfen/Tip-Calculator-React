@@ -56,12 +56,10 @@ export default function MainContainer() {
               type="number"
               className="customButton tip-percent"
               placeholder="Custom"
-              value={customTip}
+              value={tip && !tipArray.includes(tip) ? tip : ""}
               onChange={(e) => {
                 const value = e.target.value;
-                setCustomTip(value);
                 setTip(Number(value));
-                setSelectedTip("custom");
               }}
               onKeyDown={(e) => {
                 const key = e.key;
